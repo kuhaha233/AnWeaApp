@@ -1,7 +1,8 @@
-package db;
+package com.example.anweaapp.db;
 
-import org.litepal.LitePal;
-public class County extends LitePal{
+import org.litepal.crud.LitePalSupport;
+
+public class County extends LitePalSupport {
     private	int	id;
     private	String	countyName;
     private	String	weatherId;

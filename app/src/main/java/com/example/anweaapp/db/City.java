@@ -1,7 +1,8 @@
-package db;
+package com.example.anweaapp.db;
 
-import org.litepal.LitePal;
-public class City extends LitePal{
+import org.litepal.crud.LitePalSupport;
+
+public class City extends LitePalSupport {
     private	int	id;
     private	String	cityName;
     private	int	cityCode;
