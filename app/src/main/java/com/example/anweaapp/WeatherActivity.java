@@ -1,6 +1,8 @@
 package com.example.anweaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -22,6 +24,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.anweaapp.gson.Forecast;
 import com.example.anweaapp.gson.Weather;
+import com.example.anweaapp.service.AutoUpdateService;
 import com.example.anweaapp.util.HttpUtil;
 import com.example.anweaapp.util.Utility;
 
@@ -230,8 +233,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-        //Intent intent = new Intent(this, AutoUpdateService.class);
-        //startService(intent);
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
 }
